@@ -19,7 +19,7 @@ public class learning : MonoBehaviour
     public double[,] reward = new double[10,10];
 
     //translate in game coordinates to state representation
-    int t(double x){
+    int t(double x) {
         return (int)(x +4.5);
     }
     void Start()
@@ -57,6 +57,7 @@ public class learning : MonoBehaviour
         Vector3 moveto = transform.position+movement;
         //Debug.Log(transform.position.ToString() + " " + moveto.ToString());
         //transform.position = Vector3.MoveTowards(transform.position, moveto, step);
+        //Debug.Log(transform.position.x.ToString() + transform.position.y)
         updateValues(transform.position.x, transform.position.y, moveto.x, moveto.y);
         transform.position = moveto;
     }
